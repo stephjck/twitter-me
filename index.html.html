@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lola · espaço sobre mim</title>
+<meta name="theme-color" content="#e7b5d3">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#4a1d44;--soft:#7a4a74;--rose:#c0508f;--lil:#a07bd6;--card:rgba(255,226,241,.42);--card2:rgba(226,208,250,.45);--line:rgba(255,255,255,.55)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Jost','Helvetica Neue',Arial,sans-serif;font-weight:400;font-size:15.5px;line-height:1.7;color:var(--ink);letter-spacing:.01em;
+background:#ecbad8 linear-gradient(175deg,#f5cde2 0%,#e6c0ea 38%,#efb9d3 68%,#c9b0ee 100%) fixed;
+padding:env(safe-area-inset-top) 0 40px;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.6;
+background:radial-gradient(circle at 14% 16%,#fff9 0 1.5px,#0000 2.5px),radial-gradient(circle at 84% 38%,#fff9 0 1.5px,#0000 2.5px),radial-gradient(circle at 34% 78%,#fff9 0 1.5px,#0000 2.5px),radial-gradient(circle at 70% 90%,#fff9 0 1px,#0000 2px);background-size:150px 170px,210px 230px,180px 160px,120px 140px}
+main{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:18px 16px 0}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-weight:500;color:var(--ink);line-height:1.15}
+h1{font-size:clamp(64px,22vw,96px);text-align:center;font-weight:500;letter-spacing:-.01em}
+h2{font-size:32px;margin-bottom:10px}
+h3{font-size:22px;margin:18px 0 4px}
+.tag{display:block;text-align:center;font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--soft);margin:6px 0}
+.spark{color:var(--rose);font-style:normal}
+.card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:26px;padding:24px 20px;margin:20px 0;box-shadow:0 10px 36px rgba(122,40,110,.14);position:relative}
+.card.l{background:var(--card2)}
+.card p+p{margin-top:10px}
+.pic{display:block;width:100%;border-radius:22px;border:1px solid var(--line);box-shadow:0 14px 34px rgba(90,30,90,.28);margin:20px 0;background:#e4bfe8}
+video.pic{margin:10px 0 6px;aspect-ratio:540/320;object-fit:cover}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chips span{border:1px solid rgba(74,29,68,.28);border-radius:99px;padding:3px 14px;font-size:12.5px;letter-spacing:.06em;background:rgba(255,255,255,.18)}
+.note{border-left:2px solid var(--rose);padding:2px 0 2px 14px;font-size:14px;color:var(--soft);margin-top:14px}
+.fact{display:flex;gap:14px;margin-top:16px}
+.fact i{flex:none;font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;line-height:1;color:var(--rose);width:26px}
+.sticker{position:absolute;color:var(--rose);font-size:20px;opacity:.9}
+.row{display:flex;gap:14px;align-items:flex-start}
+.row img{border-radius:18px;border:1px solid var(--line);box-shadow:0 6px 16px rgba(90,30,90,.2)}
+.emo{width:86px;height:86px;object-fit:cover;border-radius:50%!important}
+.car{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;margin:14px -20px 0;padding:4px 20px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.car::-webkit-scrollbar{display:none}
+.car>div{flex:0 0 88%;scroll-snap-align:center;background:rgba(255,255,255,.18);border-radius:18px;padding:7px;border:1px solid var(--line)}
+.car img{width:100%;border-radius:12px;display:block}
+.car small{display:block;text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 4px 2px;color:var(--soft)}
+.hint{text-align:center;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--soft)}
+.yas{background:linear-gradient(150deg,rgba(214,92,152,.72),rgba(138,100,220,.72));border-color:rgba(255,255,255,.6);color:#fff}
+.yas h2,.yas h3{color:#fff;text-align:center}
+.yas .pic{margin:14px 0}
+.yas .big{font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:46px;text-align:center;line-height:1}
+.yas .note{border-color:#fff;color:#fff}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid2 .pic{margin:0;height:100%;object-fit:cover;aspect-ratio:1}
+.books{list-style:none;padding:0;margin-top:10px}
+.books li{padding:7px 0;font-size:14.5px;border-bottom:1px solid rgba(74,29,68,.15)}
+.books li b{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;font-style:italic;font-weight:600}
+.vals{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:12px}
+.vals span{border:1px solid rgba(74,29,68,.3);border-radius:99px;padding:4px 16px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:19px}
+.quiz .tag{margin-bottom:2px}
+.qo{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.qo button{font:inherit;letter-spacing:.04em;color:var(--ink);background:rgba(255,255,255,.2);border:1px solid var(--line);border-radius:16px;padding:12px 16px;text-align:left;transition:.2s}
+.qo button.ok{background:var(--rose);color:#fff;border-color:var(--rose)}
+.qo button.no{opacity:.45;text-decoration:line-through}
+#qr{margin-top:14px;min-height:22px;font-family:'Cormorant Garamond',Georgia,serif;font-style:italic;font-size:21px;text-align:center}
+footer{text-align:center;padding:26px 8px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--soft)}
+#mp{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(14px + env(safe-area-inset-bottom));z-index:9;display:flex;align-items:center;gap:8px;background:rgba(90,26,80,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#fff;border-radius:99px;padding:6px;box-shadow:0 10px 26px rgba(70,20,70,.4);max-width:94vw}
+#mp button{border:0;background:#fbe3f1;color:#6b1f5c;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;padding:0}
+#mp svg{width:15px;height:15px;fill:currentColor}
+#mp span{font-size:12px;letter-spacing:.08em;max-width:46vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding:0 6px}
+#toast{position:fixed;left:14px;right:14px;bottom:78px;background:#4a1d44;color:#fff;border-radius:16px;padding:10px 14px;font-size:13px;z-index:10;display:none;text-align:center}
+.pl{display:flex;flex-direction:column;gap:8px;margin-top:14px}
+.pl a,.pl button{text-decoration:none;display:flex;justify-content:space-between;align-items:center;font:inherit;letter-spacing:.04em;color:var(--ink);background:rgba(255,255,255,.2);border:1px solid var(--line);border-radius:16px;padding:11px 16px;text-align:left}
+.pl a:active{background:var(--rose);color:#fff;border-color:var(--rose)}
+.pl button.on{background:var(--rose);color:#fff;border-color:var(--rose)}
+</style>
+</head>
+<body>
+<main>
+
+<!-- 1. VÍDEO -->
+<span class="tag"><span class="spark">✦</span> bem-vinda(o) ao meu cantinho <span class="spark">✦</span></span>
+<h1>Lola</h1>
+<video class="pic" src="img/video.mp4" autoplay muted loop playsinline preload="auto"></video>
+<span class="tag">about me ♡ role pra baixo</span>
+
+<!-- 2. INTRO + FANART AHRI -->
+<section class="card">
+<span class="sticker" style="right:18px;top:12px">✧</span>
+<h2>Oi, que bom que você chegou.</h2>
+<p>Meu perfil é mais voltado a compartilhar fanarts, skinzinhas e coisas do gênero. Como ele também é pessoal, de vez em quando falo de outros assuntos, mas são as fanarts que mais aparecem por lá.</p>
+<div class="row" style="margin-top:18px">
+<img src="img/ahri.jpg" alt="Fanart da Ahri Guardiã Estelar" style="width:44%;flex:none">
+<div class="note" style="margin:0"><b>Uma observação:</b> as fanarts são, principalmente, de personagens que eu jogo. Sei que isso pode ser frustrante pra quem me segue, mas elas não têm a intenção de agradar ninguém: são artes que encontrei de personagens que eu gosto e quis repostar. Sempre que descubro o perfil de quem fez, dou os devidos créditos, a menos que já estejam na imagem, já que alguns artistas usam marca d'água.</div>
+</div>
+<p style="margin-top:18px">Eu gosto muito de fanarts e também gosto de desenhar, embora hoje não desenhe com tanta frequência. Os desenhos que compartilho não são meus, e quando forem, eu sinalizo.</p>
+</section>
+
+<section class="card l">
+<h2>fan facts <span class="spark">✧</span></h2>
+<div class="fact"><i>1</i><p><b>Artista desde pequena.</b> Quando eu era criança, a creche (Creche Machado de Assis) fez um concurso de desenho, e o desenho vencedor viraria a logo da creche. Eu ganhei, entre a creche inteira, fiquei muito feliz e ainda levei um prêmio. O meu desenho é a logo da creche até hoje.</p></div>
+<div class="fact"><i>2</i><p><b>Meu nascimento foi anunciado na rádio.</b> Minha mãe não tinha como avisar meu pai, que estava no trabalho e não tinha celular. Mas ele ouvia a mesma rádio todos os dias, então ela ligou pra lá e pediu que avisassem. Meu pai ouviu a notícia, foi até o hospital e chegou a tempo de me ver nascer.</p></div>
+<div class="fact"><i>3</i><p>Tenho <b>mais de 80 cursos</b> e adoro estudar.</p></div>
+<p class="note">Tinha mais coisas interessantes pra contar, mas deu preguiça, kkkkk. Fica só o que eu mais me orgulho.</p>
+</section>
+
+<!-- 3. LUX -->
+<img class="pic" src="img/lux1.jpg" alt="Lux Rosa de Cristal">
+
+<section class="card">
+<h2>o que eu faço</h2>
+<div class="chips"><span>nutricionista</span><span>téc. em gastronomia</span><span>designer</span><span>programadora</span></div>
+<p style="margin-top:16px">Programar é o que mais gosto de fazer hoje em dia. Se você se interessou pelo meu trabalho de alguma forma, é só me chamar na DM que eu envio meu portfólio.</p>
+<div class="chips"><span>signo: peixes</span><span>cor favorita: rosa</span></div>
+</section>
+
+<!-- 4. SONA -->
+<img class="pic" src="img/sona1.jpg" alt="Sona Rosa de Cristal de Prestígio">
+
+<section class="card l">
+<h2>quem eu amo <span class="spark">♡</span></h2>
+<p>Amo meu namorado, minhas amigas e minha família. E amo fazer amizades novas! Embora seja meio tímida, gosto de jogar com pessoas diferentes.</p>
+<p class="note">(aceito convites, pode me add no jogo!) principalmente meninas e quem se identifica dessa forma.</p>
+<div class="row" style="margin:18px 0 6px;justify-content:center"><img class="emo" src="img/emo1.jpg" alt=""><img class="emo" src="img/emo2.jpg" alt=""></div>
+<p>Meu duo é o meu namorado, e eu o amo mais que tudo nessa vida.</p>
+<p>Amo animais, amo mesmo, muito.</p>
+<p style="font-size:14px;color:var(--soft)">Sou bem reservada com redes sociais, e a única de que gosto de verdade é o Twitter.</p>
+</section>
+
+<!-- 5. LUX -->
+<img class="pic" src="img/lux2.jpg" alt="Lux Dança Espacial">
+
+<section class="card">
+<h2>meu perfil no lol</h2>
+<p class="note" style="margin-top:0"><b>Nick desatualizado:</b> o meu nick atual é <b>Lola</b>. O que aparece aqui era o que eu estava usando pra combinar com o meu namorado. Lola porque eu nasci muito loirinha (ainda sou, só que um pouco menos) e meu pai me chama assim, com carinho.</p>
+<div class="car">
+<div><img src="img/perfil.jpg" alt="Perfil no LoL"><small>meu perfil</small></div>
+<div><img src="img/camp1.jpg" alt="Campeões"><small>meus campeões</small></div>
+<div><img src="img/camp2.jpg" alt="Campeões"><small>meus campeões</small></div>
+</div>
+<p class="hint">arraste pro lado</p>
+<h3>minhas paixões</h3>
+<p>Os personagens que eu mais amo são <b>Lux, Sona e Seraphine</b>. Elas são a paixão da minha vida.</p>
+<p>Mas gosto de muitos outros: Ahri, Soraka, Janna, Lulu, Yuumi, Syndra, Miss Fortune, Kai'Sa, Caitlyn e muitos mais, principalmente os suportes (jogo com mais de 14!). Também amo as fadas do jogo, gosto de praticamente todas.</p>
+<div class="chips"><span>jogo autofill</span><span>lane menos favorita: top</span><span>campeã menos favorita: Senna</span></div>
+<p class="note">Sobre as rotas: jogo em qualquer uma sem problema, só não gosto da top lane. Quanto à Senna, não gosto nem de jogar contra nem de tê-la no time aliado.</p>
+</section>
+
+<!-- CRUSH YASUO -->
+<section class="card yas">
+<span class="sticker" style="left:14px;top:12px;color:#fff">♡</span><span class="sticker" style="right:14px;top:12px;color:#fff">♡</span>
+<span class="tag" style="color:#fff">♡ &nbsp;my crush no lol&nbsp; ♡</span>
+<div class="big">crush</div>
+<h2 style="margin-top:6px">Yasuo ♡</h2>
+<img class="pic" src="img/yas3.jpg" alt="Yasuo">
+<div class="grid2"><img class="pic" src="img/yas2.jpg" alt="Yasuo"><img class="pic" src="img/yas1.jpg" alt="Yasuo"></div>
+<p class="note" style="margin-top:18px">Observação: por sorte, meu noivo é main Yasuo. ♡ ♡ ♡</p>
+</section>
+
+<!-- 6. SERAPHINE -->
+<img class="pic" src="img/sera1.jpg" alt="Seraphine">
+
+<section class="card l">
+<h2>músicas que eu amo</h2>
+<p>Gosto muito de summer electrohits, acho muita vibe. Toque em uma música pra ouvir no YouTube:</p>
+<div class="pl" id="pl"></div>
+</section>
+
+<!-- 7. SONA -->
+<img class="pic" src="img/sona2.jpg" alt="Sona">
+
+<section class="card">
+<h2>coisinhas de menina</h2>
+<p>Tenho um fraco por doces, lacinhos, rosa e glitter. Adoro vinho e bebidas alcoólicas, e amo maquiagem (ADORO os produtos da Boca Rosa). Também sou viciada em cosméticos e joias: colares, pulseiras e afins.</p>
+<h3>passatempos</h3>
+<p>Tenho muitos: jogar (obviamente), fazer as unhas, maquiagem, crochê, acender incensos e cuidar dos meus gatos. Mas o meu maior hobby é estudar: cursos, temas, sobre tudo.</p>
+<p class="note">Fofocar com as minhas amigas conta como hobby?</p>
+<p style="margin-top:14px">E o meu passatempo favorito mesmo é passar HORAS no Pinterest.</p>
+<p>Meu youtuber favorito é o Coisa de Nerd.</p>
+</section>
+
+<!-- 8. SERAPHINE -->
+<img class="pic" src="img/sera2.jpg" alt="Seraphine">
+
+<section class="card l">
+<h2>leituras</h2>
+<p>Leio principalmente clássicos. Algumas recomendações, entre muitas outras:</p>
+<ul class="books">
+<li><b>Crime e Castigo</b> · Dostoiévski</li><li><b>Memórias do Subsolo</b> · Dostoiévski</li><li><b>Mulheres que Correm com os Lobos</b> · não é clássico, mas recomendo muito</li><li><b>O Estrangeiro</b> · Camus</li><li><b>A Morte de Ivan Ilitch</b> · Tolstói</li><li><b>Assim Falou Zaratustra</b> · Nietzsche</li><li><b>Metafísica</b> · Aristóteles</li><li><b>A República</b> · Platão</li><li><b>Fédon</b> · Platão</li><li><b>A Retórica</b> · Aristóteles</li><li><b>Cartas a Lucílio</b> · Sêneca</li><li><b>O Príncipe</b> · Maquiavel</li>
+</ul>
+<h3>telinha</h3>
+<p>Gosto muito de filmes, principalmente os de terror, e vejo muitos! Não sou muito de séries; a minha favorita é Breaking Bad.</p>
+<p>Minha data favorita do ano é o Halloween: o mês de outubro inteiro eu assisto a um filme de terror por dia.</p>
+</section>
+
+<section class="card">
+<h2>things i value</h2>
+<div class="vals"><span>verdade</span><span>amizade</span><span>lealdade</span><span>empatia</span><span>honestidade</span><span>gentileza</span><span>coerência</span><span>autonomia</span><span>compreensão</span><span>perdão</span></div>
+</section>
+
+<section class="card l quiz">
+<span class="tag" id="qn">mini quiz</span>
+<h2 style="text-align:center">você me conhece?</h2>
+<p style="text-align:center" id="qq"></p>
+<div class="qo" id="qo"></div>
+<div id="qr"></div>
+</section>
+
+<!-- 9. VÍDEO FINAL -->
+<video class="pic" src="img/video.mp4" autoplay muted loop playsinline preload="metadata"></video>
+<footer>obrigada por passar por aqui <span class="spark">♡</span></footer>
+</main>
+
+
+<script>
+var L=[["On the Floor","Jennifer Lopez On the Floor"],["Hung Up (Madonna)","Madonna Hung Up"],["Stereo Love","Edward Maya Stereo Love"]];
+var pl=document.getElementById('pl');
+L.forEach(function(s){var a=document.createElement('a');a.href='https://www.youtube.com/results?search_query='+encodeURIComponent(s[1]);a.target='_blank';a.rel='noopener';a.innerHTML='<span>'+s[0]+'</span><span>youtube</span>';pl.appendChild(a)});
+var Q=[["Qual é o meu personagem favorito?",["Lux","Sona","Seraphine"],"Lux","Acertou! A Lux é a minha paixão ♡"],
+["Quais destas personagens, na minha opinião, têm as piores fanarts?",["Sona","Lux","Seraphine"],"Lux","Acertou! As fanarts da Lux me deixam em dúvida ♡"],
+["Das minhas mains, qual tem as skins mais bonitas, na minha opinião?",["Lux","Sona","Seraphine"],"Seraphine","Acertou! As skins da Seraphine são lindas ♡"]];
+var qi=0,qq=document.getElementById('qq'),qo=document.getElementById('qo'),qr=document.getElementById('qr'),qn=document.getElementById('qn');
+function showQ(){var q=Q[qi];qn.textContent='pergunta '+(qi+1)+' de '+Q.length;qq.textContent=q[0];qo.innerHTML='';qr.textContent='';
+q[1].forEach(function(n){var b=document.createElement('button');b.textContent=n;b.onclick=function(){
+if(n==q[2]){[].forEach.call(qo.children,function(x){x.disabled=true});b.className='ok';qr.textContent=q[3];qi++;
+setTimeout(function(){if(qi<Q.length)showQ();else{qn.textContent='fim do quiz';qq.textContent='Você me conhece mesmo!';qo.innerHTML='';qr.textContent='Quiz concluído ♡'}},1800)}
+else{b.className='no';b.disabled=true;qr.textContent='Quase! Tenta outra vez.'}};qo.appendChild(b)})}
+showQ();
+</script>
+</body>
+</html>
